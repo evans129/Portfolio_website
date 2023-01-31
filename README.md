@@ -1,6 +1,6 @@
 # Portfolio Website
 This is my portfolio website built using react.
-It also uses Email.js for contact.Send me a message😀.
+It also uses Email.js for messaging services.Send me a message😀.
 
 # [CLICK ME😀](https://evans129.github.io/Portfolio_website/)
 
