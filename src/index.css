@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+font-family: 'Outfit', sans-serif;
+}
+body{
+background: black;
+}
+h1,h4,p,a{
+text-decoration: none;
+color: white;
+}
+ul{
+list-style-type: none;
+}
+
+.btn {
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 1px solid white;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  font-weight: 600;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-family: Phantomsans, sans-serif;
+  font-size: 1rem;
+  padding: 12px 32px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:active,
+.btn:hover {
+  background: rgb(92, 88, 88);
+  color: white;
+  transform: scale(1.5) perspective(1px);
+  transition: 0.3s;
+  outline: 0;
+}
+.btn-light
+{
+background: transparent;
+color: white;
+border: 1px solid white;
+border-radius: 8px;
+font-weight: 600;
+padding: 12px 32px;
+box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+text-transform: uppercase;
+font-family: Phantomsans, sans-serif;
+cursor: pointer;
+font-size: 1rem;
+}
+.btn-light:active,
+.btn-light:hover {
+  background: rgb(92, 88, 88);
+  transform: scale(1.2) perspective(1px);
+  color: white;
+  transition: 0.3s;
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .btn {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+.projects{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem;
+}
+.projects-list{
+  display: flex;
+}
+.projects-list li{
+  padding: 0 1rem;
+}
+.nav-menu li a{
+font-size: 1.2rem;
+font-weight: 500;
+}
