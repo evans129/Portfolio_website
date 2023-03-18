@@ -3,6 +3,7 @@ import pro2 from "../assets/project2.jpg"
 import pro3 from "../assets/project3.png"
 import pro4 from "../assets/project4.png"
 import pro5 from "../assets/project5.png"
+import pro6 from "../assets/project6.png"
 const ProjectCardData =[
     {
     imgsrc: pro1,
@@ -38,6 +39,13 @@ const ProjectCardData =[
                 text: "This is a Diabetes Predictor app made using SVM ML algorithm and deployed using Streamlit",
                 view: "https://evans129-diabetes-predictor-stream-diabetes-predictor-ui-rs31at.streamlit.app/",
                 source: "https://github.com/evans129/Diabetes_predictor_streamlit_ui",
+            },
+            {
+                imgsrc: pro6,
+                title: "Face Emotion Recognizer",
+                text: "This is a Face Emotion Recognition app built using OpenCv python,Tensorflow and deployed using Streamlit",
+                view: "https://evans129-face-emotion-recognizer-app-h5itr9.streamlit.app/",
+                source: "https://github.com/evans129/Face-Emotion-Recognizer",
             },
 
 ];
