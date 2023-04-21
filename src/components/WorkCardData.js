@@ -4,14 +4,46 @@ import pro3 from "../assets/project3.png"
 import pro4 from "../assets/project4.png"
 import pro5 from "../assets/project5.png"
 import pro6 from "../assets/project6.png"
+import proj1 from "../assets/proj1.png"
+import proj2 from "../assets/proj2.png"
+import proj4 from "../assets/proj4.png"
+import finalpro from "../assets/final.png"
 const ProjectCardData =[
     {
-    imgsrc: pro1,
-    title: "Minor Project",
-    text: "This project uses various Machine Learning Models.This webpage is deployed using Streamlit.",
-    view: "https://evans129.github.io/Minor-Project/project_frontpage.html",
-    source: "https://github.com/evans129/Minor-Project",
-    },
+        imgsrc: finalpro,
+        title: "Final Year Project",
+        text: "This Project analyzes any given Face. Reactjs, Tensorflow, Keras, Yagmail, Emailjs and other libraries are used.Project is Deployed using Streamlit and Github Pages.",
+        view: "https://evans129.github.io/Final-Year-Project/",
+        source: "https://github.com/evans129/Final-Year-Project",
+        },
+    {
+        imgsrc: proj1,
+        title: "Face Analyzer",
+        text: "This Project analyzes any given Face and finds out some details about the face using Deeplearning ,Tensorflow and Transfer learning models.Project is Deployed using Streamlit.",
+        view: "https://evans129-faceanalyzer-app-y9i2zf.streamlit.app/",
+        source: "https://github.com/evans129/FaceAnalyzer",
+        },
+    {
+        imgsrc: pro1,
+        title: "Minor Project",
+        text: "This project uses various Machine Learning Models.This webpage is deployed using Streamlit.",
+        view: "https://evans129.github.io/Minor-Project/project_frontpage.html",
+        source: "https://github.com/evans129/Minor-Project",
+        },
+        {
+            imgsrc: proj2,
+            title: "Face Mask Detector",
+            text: "This project Detects a Face Mask.Trained using CNN and Deeplearning.Tensorflow and OpenCV library for training and building the model. Project is deployed using streamlit. Dataset used for training-> (https://www.kaggle.com/datasets/omkargurav/face-mask-dataset)",
+            view: "https://evans129-face-mask-detector-app-86yp6y.streamlit.app/",
+            source: "https://github.com/evans129/Face_Mask_detector",
+            },
+            {
+                imgsrc: proj4,
+                title: "Sleepiness_Checker",
+                text: "This Project uses Tensorflow and OpenCV library for training and building the model. Project is deployed using streamlit.",
+                view: "https://evans129-sleepiness-checker-app-yjvqpa.streamlit.app/",
+                source: "https://github.com/evans129/Sleepiness_checker",
+            },
     {
         imgsrc: pro2,
         title: "Face Recognition",
