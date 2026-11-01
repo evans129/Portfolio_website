@@ -1,18 +1,28 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import HeroImg from '../components/HeroImg'
-import Footer from '../components/Footer'
-import Work from '../components/Work'
+import React from "react";
+import Navbar from "../components/Navbar";
+import HeroImg from "../components/HeroImg";
+import Highlights from "../components/Highlights";
+import Experience from "../components/Experience";
+import Work from "../components/Work";
+import Footer from "../components/Footer";
+import usePageTitle from "../hooks/usePageTitle";
 
 const Home = () => {
+  usePageTitle();
   return (
-    <div>
-        <Navbar></Navbar>
-        <HeroImg></HeroImg>
-        <Work></Work>
-        <Footer></Footer>
-    </div>
-  )
-}
+    <>
+      <Navbar />
+      <main>
+        <HeroImg />
+        <Highlights />
+        <div className="section-alt">
+          <Experience compact />
+        </div>
+        <Work featuredOnly />
+      </main>
+      <Footer />
+    </>
+  );
+};
 
-export default Home
+export default Home;

@@ -1,78 +1,67 @@
 # Portfolio Website
-This is my portfolio website built using react.
-It also uses Email.js for messaging services.Send me a message😀.
 
-# [CLICK ME😀](https://evans129.github.io/Portfolio_website/)
+Personal portfolio of **Devansh Kumar**, Software Engineer II at Microsoft.
 
+**Live site:** https://evans129.github.io/Portfolio_website/
 
+Built with React (Create React App) and React Router, with EmailJS for the contact form. It's deployed to GitHub Pages by GitHub Actions.
 
-# Getting Started with Create React App
+## Project structure
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+| Path | What it is |
+| --- | --- |
+| `src/data/resume.json` | **Single source of truth** for experience, skills, education, and highlights. The website and the resume PDFs are both generated from it. |
+| `src/data/resume-files.json` | Generated manifest of the public resume PDFs and their page previews. |
+| `src/components/`, `src/routes/` | React components and pages (Home, About, Projects, Resume, Contact, 404). |
+| `src/components/WorkCardData.js` | Project cards shown on the Projects page. |
+| `public/files/` | Generated public resume PDFs and WebP page previews. |
+| `resume/build_resume.py` | Generates the ATS-friendly resumes (DOCX, PDF, and previews) from `resume.json`. |
+| `scripts/postbuild.js` | Makes deep links work on GitHub Pages (see [Deployment](#deployment)). |
+| `.github/workflows/deploy.yml` | CI: test, build, and deploy to GitHub Pages. |
 
-## Available Scripts
+## Local development
 
-In the project directory, you can run:
+```bash
+npm ci
+npm start          # dev server at http://localhost:3000/Portfolio_website
+npm test           # unit tests (Jest + Testing Library)
+npm run build      # production build in build/
+```
 
-### `npm start`
+## Updating the resume
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Edit `src/data/resume.json`. Each bullet can include `"variants": ["one"]` or `["two"]` to appear only in the 1-page or 2-page resume. If omitted, it appears in both. The website shows the 2-page (`"two"`) bullets.
+2. Regenerate the files (Windows + Microsoft Word required for the PDF export):
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+   ```powershell
+   pip install -r resume/requirements.txt
+   npm run resume
+   ```
 
-### `npm test`
+   This writes `public/files/Devansh_Kumar_Resume.pdf` (1 page) and `public/files/Devansh_Kumar_Resume_Detailed.pdf` (2 pages), their page previews, and `src/data/resume-files.json`. Each version is auto-fitted to its page budget (body text never below 10 pt). The build fails with a message if the content doesn't fit.
+3. **Private copies with a phone number** (for job applications) are only generated when you pass the number at run time. They're written to `resume/private/`, which is git-ignored:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```powershell
+   $env:RESUME_PHONE = "<your phone number>"; npm run resume
+   ```
 
-### `npm run build`
+   Never put the phone number in `resume.json`. A unit test fails if the public data contains one.
+4. Run `python resume/build_resume.py --print-text` to see the plain text an applicant tracking system (ATS) would extract.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The resume layout follows common ATS guidance:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- One column, with standard section headings (Summary, Skills, Work Experience, Education)
+- Calibri font with contact details in the body rather than a header or footer
+- No tables, text boxes, icons, or images
+- Real, selectable text exported as a tagged PDF
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Deployment
 
-### `npm run eject`
+Every push to `main` runs `.github/workflows/deploy.yml`, which runs the tests, builds the site, and deploys `build/` to GitHub Pages. Pull requests run the tests and build only.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+One-time repository settings:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. The repository must be **public**, or the account must have GitHub Pro, because GitHub Pages doesn't serve private repositories on free plans.
+2. **Settings > Pages > Build and deployment > Source: GitHub Actions**.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+GitHub Pages has no fallback for single-page apps. `scripts/postbuild.js` copies the app shell to `<route>/index.html` for every route (so deep links like `/resume` return HTTP 200) and to `404.html` for unknown paths. If you add a route to `src/App.js`, add it to the `ROUTES` list in that script too.

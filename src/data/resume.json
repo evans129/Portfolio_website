@@ -1,0 +1,413 @@
+{
+  "updated": "November 2026",
+  "basics": {
+    "name": "Devansh Kumar",
+    "headline": "Software Engineer II at Microsoft",
+    "resumeHeadline": "Software Engineer II | Full-Stack, Azure Cloud, and AI Agents",
+    "location": "Hyderabad, India",
+    "relocation": "Open to relocation",
+    "email": "[email removed]",
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/devansh-kumar-a51322213/",
+        "display": "linkedin.com/in/devansh-kumar-a51322213"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/evans129",
+        "display": "github.com/evans129"
+      },
+      {
+        "label": "Portfolio",
+        "url": "https://evans129.github.io/Portfolio_website/",
+        "display": "evans129.github.io/Portfolio_website"
+      },
+      {
+        "label": "LeetCode",
+        "url": "https://leetcode.com/devansh129/",
+        "display": "leetcode.com/devansh129",
+        "website": true
+      }
+    ],
+    "tagline": "I build secure, scalable cloud platforms on Azure and AI agents that make engineering teams faster.",
+    "summary": "Software Engineer II at Microsoft with 3+ years building full-stack, cloud-native systems on Azure (C#/.NET, React, TypeScript, Kusto). Owned architecture, authentication, and data ingestion for a greenfield AI content platform; shipped Microsoft 365 Lighthouse features that doubled Baselines monthly users; built award-winning AI incident agents."
+  },
+  "highlights": [
+    {
+      "value": "2x",
+      "label": "monthly users on Microsoft 365 Lighthouse Baselines after shipping task-update notifications"
+    },
+    {
+      "value": "80%+",
+      "label": "increase in baseline cloning from a Baselines UX redesign"
+    },
+    {
+      "value": "70%+",
+      "label": "fewer Lighthouse incidents in a reliability drive where I introduced self-heal alerting"
+    },
+    {
+      "value": "Best Hack",
+      "label": "Live Site & Automation award for an AI agent that triages and resolves incidents"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Languages",
+      "items": [
+        "C#",
+        "TypeScript",
+        "JavaScript",
+        "Python",
+        "C++",
+        "Java",
+        "SQL",
+        "KQL (Kusto)",
+        "Scala",
+        "PowerShell"
+      ]
+    },
+    {
+      "category": "Frameworks",
+      "items": [
+        ".NET",
+        "ASP.NET Core",
+        "React",
+        "REST APIs",
+        "Microsoft Graph",
+        "Xamarin (Android)",
+        "HTML/CSS"
+      ]
+    },
+    {
+      "category": "Azure",
+      "items": [
+        "Container Apps",
+        "App Service",
+        "Data Explorer (ADX)",
+        "Cosmos DB",
+        "Synapse",
+        "AI Search",
+        "Key Vault",
+        "Entra ID"
+      ]
+    },
+    {
+      "category": "AI",
+      "items": [
+        "Azure OpenAI",
+        "RAG",
+        "Model Context Protocol (MCP)",
+        "function calling",
+        "AI Foundry",
+        "Copilot Studio",
+        "GitHub Copilot"
+      ]
+    },
+    {
+      "category": "DevOps",
+      "items": [
+        "Bicep (IaC)",
+        "Azure DevOps CI/CD",
+        "Docker",
+        "Git",
+        "OpenTelemetry",
+        "Application Insights"
+      ]
+    },
+    {
+      "category": "Testing",
+      "items": [
+        "Playwright",
+        "unit testing",
+        "Storybook",
+        "Azure Load Testing",
+        "accessibility"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Microsoft",
+      "location": "Hyderabad, India",
+      "roles": [
+        {
+          "title": "Software Engineer II",
+          "start": "Aug 2026",
+          "end": "Present"
+        },
+        {
+          "title": "Software Engineer",
+          "start": "Jul 2023",
+          "end": "Aug 2026"
+        }
+      ],
+      "groups": [
+        {
+          "name": "AI-powered content platform (greenfield)",
+          "context": "Platform architecture, security, data ingestion, and reliability",
+          "tech": [
+            "C#/.NET",
+            "Azure Container Apps",
+            "Entra ID",
+            "Azure Data Explorer",
+            "Bicep",
+            "Playwright",
+            "OpenTelemetry"
+          ],
+          "bullets": [
+            {
+              "text": "Owned platform architecture for a greenfield AI-powered content platform on Azure (Container Apps, Entra ID, ADX), defining the repo strategy, layered Backend-for-Frontend design, and a data access layer reused across APIs."
+            },
+            {
+              "text": "Cut API latency and application compute load by moving core business logic into Kusto (ADX) functions with query optimization and native caching, leaving the data access layer as thin, parameterized queries."
+            },
+            {
+              "text": "Built the platform's authentication: least-privilege Entra ID app registrations, JWT validation (signature, issuer, audience, lifetime, scope), and a token-validation API, meeting Secure Future Initiative (SFI) standards by design."
+            },
+            {
+              "text": "Built a GitHub-to-Kusto ingestion service (.NET worker on Container Apps Jobs) with polling, checkpointing, and retries, provisioned via Bicep (managed identity, Key Vault) with OpenTelemetry alerts and auto-created incidents.",
+              "variants": [
+                "one"
+              ]
+            },
+            {
+              "text": "Built a GitHub-to-Kusto ingestion service as a .NET worker on Azure Container Apps Jobs with polling, checkpointing, and resilience logic; provisioned it with Bicep (managed identity, Storage, Key Vault) and added OpenTelemetry, alerts, and auto-created incidents, so new repos and issue types onboard with minimal effort.",
+              "variants": [
+                "two"
+              ]
+            },
+            {
+              "text": "Made the platform fully infrastructure-as-code with Bicep and Azure DevOps CI/CD (Kusto, Container Apps Jobs, E2E pipelines), eliminating configuration drift and turning new security requirements into code changes.",
+              "variants": [
+                "two"
+              ]
+            },
+            {
+              "text": "Raised release confidence with non-flaky Playwright E2E pipelines (federated-identity auth, near-zero false positives) and production-like Azure Load Testing over private networking.",
+              "variants": [
+                "one"
+              ]
+            },
+            {
+              "text": "Raised release confidence with non-flaky Playwright E2E pipelines (federated-identity auth, near-zero false positives) and production-like Azure Load Testing, which drove production-parity environment upgrades.",
+              "variants": [
+                "two"
+              ]
+            },
+            {
+              "text": "Delivered the proof of concept that validated the platform's architecture, data model, and auth design before build-out, and prototyped an authenticated MCP server that exposes platform capabilities to AI agents.",
+              "variants": [
+                "two"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Content publishing platform for Microsoft Support",
+          "context": "Live site, release engineering, and AI automation",
+          "tech": [
+            "Azure OpenAI",
+            "RAG",
+            "MCP",
+            "Azure AI Search",
+            "Synapse",
+            "Scala",
+            "Azure DevOps"
+          ],
+          "bullets": [
+            {
+              "text": "Won Best Hack (Live Site & Automation) at a division-wide hackathon for an AI incident agent that triages and resolves incidents by orchestrating multiple MCP servers; the agent was then dogfooded internally."
+            },
+            {
+              "text": "Built a help agent grounded in internal docs and troubleshooting guides (RAG) that the on-call team uses to resolve known issues and unblock customers."
+            },
+            {
+              "text": "Introduced versioned release branches with rollback for two platforms, enabling a Sev1 mitigation within an hour; resolved Sev1s on support pages and KB-article redirects (root-caused to Azure DevOps throttling)."
+            },
+            {
+              "text": "Diagnosed an Azure Cognitive Search indexing failure in a high-priority escalation with no prior ramp-up; unblocked a partner team's monthly reporting by updating indexer fields when a code fix couldn't ship.",
+              "variants": [
+                "two"
+              ]
+            },
+            {
+              "text": "Ramped up on Azure Synapse and Scala within a month to own logs and user-feed pipelines, restored the beta environment, and wrote documentation and debugging guides for the system.",
+              "variants": [
+                "two"
+              ]
+            },
+            {
+              "text": "Automated release and review workflows: Copilot-driven release and pipeline-run agents, a branch-cut script separating production and pre-production deployments, and AI code-review bot instructions and skills.",
+              "variants": [
+                "two"
+              ]
+            },
+            {
+              "text": "Fixed the PR build pipeline (unsupported package version) to unblock frontend deployments, restored critical service accounts to unblock localization, and created short links and runbooks that sped up common developer tasks.",
+              "variants": [
+                "two"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Microsoft 365 Lighthouse",
+          "context": "Full-stack features for a multi-tenant portal used by managed service providers",
+          "tech": [
+            "React",
+            "TypeScript",
+            "Microsoft Graph",
+            "Kusto",
+            "Cosmos DB",
+            "Playwright"
+          ],
+          "bullets": [
+            {
+              "text": "Redesigned the Baselines experience (default vs. custom authoring, one-click cloning of defaults, coach marks, empty states), increasing baseline cloning by 80%+ and completion of its three core actions by 20%+ (MAU-adjusted)."
+            },
+            {
+              "text": "Shipped blue-dot and message-bar notifications for updated baseline tasks, driving a 2.3x month-over-month jump in page visits and doubling monthly users, sustained over the quarter; the pattern was adopted across Lighthouse."
+            },
+            {
+              "text": "Turned a hackathon prototype into a production feature that shows tenant deployment plans from the Baselines page in a side panel, reaching a 5.9% click-through rate in its first month and closing a key discoverability gap."
+            },
+            {
+              "text": "Built Copilot adoption features (task filters, a recommended-tasks flyout delivered post branch cut to keep a high-visibility launch on time, telemetry, and a self-service purchases metric across API and UI)."
+            },
+            {
+              "text": "Helped cut Lighthouse incident volume by 70%+ by introducing a self-heal tier that keeps noisy alerts (e.g., VM health) as notifications and escalates only past thresholds; automated incident filtering and tuned monitors."
+            },
+            {
+              "text": "Built partner-sales APIs on Microsoft Graph backed by Kusto (renewals, license opportunities, user preferences), fixed pagination, and lifted a 7-ID filter limit by replacing chained OR clauses with an in-operator filter.",
+              "variants": [
+                "two"
+              ]
+            },
+            {
+              "text": "Raised test coverage with an AI instructions file for generating unit tests and Storybook stories with VS Code agents (adopted team-wide), new Baselines unit tests, stabilized Playwright E2E tests, and a repaired E2E pipeline.",
+              "variants": [
+                "two"
+              ]
+            },
+            {
+              "text": "Uncovered and fixed Lighthouse-wide issues (broken empty states replaced with shared components, accessibility bugs, an infinite loading shimmer, permission tags) and trimmed baseline URLs to essential fields.",
+              "variants": [
+                "two"
+              ]
+            },
+            {
+              "text": "Automated quarterly test-tenant onboarding (an SFI requirement) with AI, wrote PowerShell tools for test-account setup and Graph schema (CSDL) validation, and fixed the Graph schema-publishing pipeline.",
+              "variants": [
+                "two"
+              ]
+            },
+            {
+              "text": "Prototyped Copilot agents that bring Lighthouse into Microsoft Teams and used Azure OpenAI function calling with GPT models to automate baseline task deployments (hackathons).",
+              "variants": [
+                "two"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Microsoft",
+      "location": "Hyderabad, India",
+      "roles": [
+        {
+          "title": "Software Engineer Intern",
+          "start": "May 2022",
+          "end": "Jul 2022"
+        }
+      ],
+      "groups": [
+        {
+          "name": "Microsoft 365 Admin mobile app",
+          "context": "Android in-app updates",
+          "tech": [
+            "Xamarin",
+            "Android",
+            "Google Play In-App Updates"
+          ],
+          "bullets": [
+            {
+              "text": "Evaluated Xamarin-based and native Google Play In-App Updates approaches and implemented both immediate and flexible update flows in the Microsoft 365 Admin Android app, improving the app update rate by 60%."
+            },
+            {
+              "text": "Fixed edge-case bugs, validated the feature through alpha and internal beta testing on 10-20 devices, and presented the POC demo, tech doc, and recommendation to the team.",
+              "variants": [
+                "two"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "leadership": [
+    {
+      "text": "Mentored new hires as the India team doubled; served as Cosmos DB subject-matter expert and point of contact for Microsoft Graph API reviews; ran knowledge-transfer sessions on Graph, Kusto-backed APIs, and AI tools.",
+      "variants": [
+        "one"
+      ]
+    },
+    {
+      "text": "Mentored and onboarded new hires as the India team doubled; authored the team's Getting Started guide and kept a living runbook of commands and links that unblocked teammates.",
+      "variants": [
+        "two"
+      ]
+    },
+    {
+      "text": "Cosmos DB subject-matter expert and single point of contact for the team's Microsoft Graph API reviews; ran knowledge-transfer sessions on Graph deployment and schema publishing, Kusto-backed APIs, and AI tools.",
+      "variants": [
+        "two"
+      ]
+    },
+    {
+      "text": "Go-to engineer for product managers' data queries and analysis; proactively cleaned up pending incidents and updated troubleshooting guides in areas beyond my ownership.",
+      "variants": [
+        "two"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Face Analyzer (Final Year Project)",
+      "tech": "React, TensorFlow, Keras, Streamlit",
+      "text": "Web app that analyzes a face from a camera capture or uploaded image using transfer-learning models, with a downloadable report and email delivery (EmailJS, Yagmail); deployed on Streamlit and GitHub Pages.",
+      "url": "https://github.com/evans129/FaceAnalyzer"
+    },
+    {
+      "name": "Face Mask Detector",
+      "tech": "TensorFlow, OpenCV, Streamlit",
+      "text": "CNN-based face mask detector trained on a public Kaggle dataset and deployed as a Streamlit web app.",
+      "url": "https://github.com/evans129/Face_Mask_detector"
+    }
+  ],
+  "education": [
+    {
+      "school": "Birla Institute of Technology, Mesra",
+      "location": "Ranchi, India",
+      "degree": "Bachelor of Technology in Computer Science and Engineering",
+      "start": "2019",
+      "end": "2023",
+      "detail": "CGPA: 9.26/10"
+    }
+  ],
+  "awards": [
+    {
+      "text": "Best Hack, Live Site & Automation category, Microsoft division-wide hackathon: AI agent that triages and resolves incidents through MCP servers.",
+      "variants": [
+        "two"
+      ]
+    },
+    {
+      "text": "Two hackathon projects taken to production or internal dogfood: Baselines-to-deployment-plan integration (5.9% click-through) and the AI incident agent.",
+      "variants": [
+        "two"
+      ]
+    }
+  ]
+}

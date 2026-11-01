@@ -1,25 +1,40 @@
 import "./HeroImgStyle.css";
-
-import React from 'react'
-import IntroImg from "../assets/intro.jpg"
+import React from "react";
 import { Link } from "react-router-dom";
+import HeroBackground from "../assets/hero.jpg";
+import SocialLinks from "./SocialLinks";
+import resume from "../data/resume.json";
 
 const HeroImg = () => {
-  return (
-    <div className="hero">
-        <div className="mask">
-            <img className="intro-img" src={IntroImg} alt="IntroImg"></img>
-        </div>
-        <div className="content">
-          <p> Hi! I am Devansh</p>
-          <h1>Software Developer</h1>
-          <div>
-          <Link to="/project"><button className="btn">Projects</button></Link>
-            <Link to="/contact"><button className="btn-light">Contact</button></Link>
-          </div>
-        </div>
-    </div>
-  )
-}
+  const { basics } = resume;
+  const [role, company] = basics.headline.split(" at ");
 
-export default HeroImg
+  return (
+    <section className="hero">
+      <div className="mask">
+        <img className="intro-img" src={HeroBackground} alt="" />
+      </div>
+      <div className="content">
+        <p className="eyebrow">Hi, I'm {basics.name}</p>
+        <h1>
+          <span className="hero-role">{role}</span>
+          {company && ` at ${company}`}
+        </h1>
+        <p className="tagline">{basics.tagline}</p>
+        <div className="hero-actions">
+          <Link to="/resume" className="btn">
+            Resume
+          </Link>
+          <Link to="/contact" className="btn-light">
+            Contact
+          </Link>
+        </div>
+        <div className="hero-social">
+          <SocialLinks size={26} />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroImg;
