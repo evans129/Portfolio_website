@@ -31,7 +31,7 @@
       }
     ],
     "tagline": "I build secure, scalable cloud platforms on Azure and AI agents that make engineering teams faster.",
-    "summary": "Software Engineer II at Microsoft with 3+ years building full-stack, cloud-native systems on Azure (C#/.NET, React, TypeScript, Kusto). Owned architecture, authentication, and data ingestion for a greenfield AI content platform; shipped Microsoft 365 Lighthouse features that doubled Baselines monthly users; built award-winning AI incident agents."
+    "summary": "Software Engineer II at Microsoft with 3+ years building full-stack, cloud-native systems on Azure (C#/.NET, React, TypeScript, Kusto). Owned architecture, authentication, and data ingestion for an AI content platform; shipped Microsoft 365 Lighthouse features that doubled Baselines monthly users; two-time Microsoft hackathon winner for agentic AI."
   },
   "highlights": [
     {
@@ -47,8 +47,8 @@
       "label": "fewer Lighthouse incidents in a reliability drive where I introduced self-heal alerting"
     },
     {
-      "value": "Best Hack",
-      "label": "Live Site & Automation award for an AI agent that triages and resolves incidents"
+      "value": "2 wins",
+      "label": "Microsoft hackathon awards for agentic AI: Code to Content (2026) and an AI incident agent (2025)"
     }
   ],
   "skills": [
@@ -144,10 +144,11 @@
       ],
       "groups": [
         {
-          "name": "AI-powered content platform (greenfield)",
-          "context": "Platform architecture, security, data ingestion, and reliability",
+          "name": "AI platform for Microsoft product content (greenfield)",
+          "context": "Agents turn content signals into PRs for expert review",
           "tech": [
             "C#/.NET",
+            "TypeScript",
             "Azure Container Apps",
             "Entra ID",
             "Azure Data Explorer",
@@ -157,7 +158,7 @@
           ],
           "bullets": [
             {
-              "text": "Owned platform architecture for a greenfield AI-powered content platform on Azure (Container Apps, Entra ID, ADX), defining the repo strategy, layered Backend-for-Frontend design, and a data access layer reused across APIs."
+              "text": "Owned platform architecture on Azure (Container Apps, App Service, Entra ID, ADX), defining the repo strategy, layered Backend-for-Frontend design, and a Kusto-function data access layer reused across APIs."
             },
             {
               "text": "Cut API latency and application compute load by moving core business logic into Kusto (ADX) functions with query optimization and native caching, leaving the data access layer as thin, parameterized queries."
@@ -178,15 +179,12 @@
               ]
             },
             {
+              "text": "Shipped one-click accuracy reviews: APIs that rank flagged support articles by page impressions and open a reviewable GitHub pull request in ~2–4 s via a GitHub App, so experts fix high-traffic articles first."
+            },
+            {
               "text": "Made the platform fully infrastructure-as-code with Bicep and Azure DevOps CI/CD (Kusto, Container Apps Jobs, E2E pipelines), eliminating configuration drift and turning new security requirements into code changes.",
               "variants": [
                 "two"
-              ]
-            },
-            {
-              "text": "Raised release confidence with non-flaky Playwright E2E pipelines (federated-identity auth, near-zero false positives) and production-like Azure Load Testing over private networking.",
-              "variants": [
-                "one"
               ]
             },
             {
@@ -196,10 +194,19 @@
               ]
             },
             {
+              "text": "Fixed mismatched accuracy dashboards (only 142 of 278 product/site views matched GitHub) with strict label-based issue-to-product matching and a reversible, versioned Kusto re-map (plan, apply, verify, undo).",
+              "variants": [
+                "two"
+              ]
+            },
+            {
               "text": "Delivered the proof of concept that validated the platform's architecture, data model, and auth design before build-out, and prototyped an authenticated MCP server that exposes platform capabilities to AI agents.",
               "variants": [
                 "two"
               ]
+            },
+            {
+              "text": "Won Harden the Core Franchise (Data Platform Growth) at Microsoft Global Hackathon 2026 with Code to Content, an agentic system that detects product changes and updates affected docs so users and AI agents get accurate answers."
             }
           ]
         },
@@ -217,7 +224,7 @@
           ],
           "bullets": [
             {
-              "text": "Won Best Hack (Live Site & Automation) at a division-wide hackathon for an AI incident agent that triages and resolves incidents by orchestrating multiple MCP servers; the agent was then dogfooded internally."
+              "text": "Won Best Hack (Live Site & Automation, Data Platform Growth) at Microsoft Hackathon 2025 for an AI incident agent that triages and resolves incidents by orchestrating multiple MCP servers; it was then dogfooded internally."
             },
             {
               "text": "Built a help agent grounded in internal docs and troubleshooting guides (RAG) that the on-call team uses to resolve known issues and unblock customers."
@@ -253,7 +260,7 @@
         },
         {
           "name": "Microsoft 365 Lighthouse",
-          "context": "Full-stack features for a multi-tenant portal used by managed service providers",
+          "context": "Full-stack on a multi-tenant admin management platform for managed service providers",
           "tech": [
             "React",
             "TypeScript",
@@ -273,7 +280,10 @@
               "text": "Turned a hackathon prototype into a production feature that shows tenant deployment plans from the Baselines page in a side panel, reaching a 5.9% click-through rate in its first month and closing a key discoverability gap."
             },
             {
-              "text": "Built Copilot adoption features (task filters, a recommended-tasks flyout delivered post branch cut to keep a high-visibility launch on time, telemetry, and a self-service purchases metric across API and UI)."
+              "text": "Built Copilot adoption features (task filters, a recommended-tasks flyout delivered post branch cut to keep a high-visibility launch on time, telemetry, and a self-service purchases metric across API and UI).",
+              "variants": [
+                "two"
+              ]
             },
             {
               "text": "Helped cut Lighthouse incident volume by 70%+ by introducing a self-heal tier that keeps noisy alerts (e.g., VM health) as notifications and escalates only past thresholds; automated incident filtering and tuned monitors."
@@ -398,7 +408,13 @@
   ],
   "awards": [
     {
-      "text": "Best Hack, Live Site & Automation category, Microsoft division-wide hackathon: AI agent that triages and resolves incidents through MCP servers.",
+      "text": "Winner, Harden the Core Franchise category, Data Platform Growth, Microsoft Global Hackathon 2026: Code to Content, an agentic system that keeps authoritative content in sync with product changes.",
+      "variants": [
+        "two"
+      ]
+    },
+    {
+      "text": "Best Hack, Live Site & Automation category, Data Platform Growth, Microsoft Hackathon 2025: AI agent that triages and resolves incidents through MCP servers.",
       "variants": [
         "two"
       ]
