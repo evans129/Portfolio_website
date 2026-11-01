@@ -3,7 +3,7 @@
   "basics": {
     "name": "Devansh Kumar",
     "headline": "Software Engineer II at Microsoft",
-    "resumeHeadline": "Software Engineer II | Full-Stack, Azure Cloud, and AI Agents",
+    "resumeHeadline": "Software Engineer II | Backend, Cloud, and AI Systems",
     "location": "Hyderabad, India",
     "relocation": "Open to relocation",
     "email": "[email removed]",
@@ -31,7 +31,7 @@
       }
     ],
     "tagline": "I build secure, scalable cloud platforms on Azure and AI agents that make engineering teams faster.",
-    "summary": "Software Engineer II at Microsoft with 3+ years building full-stack Azure systems in C#/.NET, Python, React, TypeScript, and KQL. Owned architecture, authentication, and data ingestion for a greenfield AI-powered content platform; doubled monthly users of Microsoft 365 Lighthouse security baselines and won two hackathon awards for agentic AI."
+    "summary": "Software Engineer II at Microsoft with 3+ years building production Azure and AI systems in C#/.NET, Python, and TypeScript. Owned a greenfield AI platform's architecture; shipped agentic workflows, RAG, and multi-tenant services, saving an estimated 260+ engineering hours and doubling monthly users of a Microsoft 365 Lighthouse feature."
   },
   "highlights": [
     {
@@ -139,7 +139,7 @@
         {
           "title": "Software Engineer",
           "start": "Jul 2023",
-          "end": "Aug 2026"
+          "end": "Jul 2026"
         }
       ],
       "groups": [
@@ -178,7 +178,7 @@
               ]
             },
             {
-              "text": "Secured APIs with OAuth 2.0: least-privilege Entra ID (Azure AD) app registrations and strict JWT validation, meeting Microsoft's Secure Future Initiative standards."
+              "text": "Secured APIs with OAuth 2.0: least-privilege Entra ID (Azure AD) app registrations and strict JWT validation, meeting enterprise authentication and authorization requirements."
             },
             {
               "text": "Engineered reliable, checkpointed ingestion of 23K+ GitHub issues from 115 docs repos into Azure Data Explorer.",
@@ -315,7 +315,7 @@
             "React",
             "TypeScript",
             "Microsoft Graph",
-            "Kusto",
+            "Azure Data Explorer",
             "Cosmos DB",
             "Playwright"
           ],
@@ -426,7 +426,7 @@
               ]
             },
             {
-              "text": "Fixed edge-case bugs, validated with alpha and beta testing on 10–20 devices, and presented the POC, tech doc, and recommendation to the team.",
+              "text": "Fixed edge-case bugs, validated with alpha and beta testing on 10–20 devices, and presented the proof of concept, tech doc, and recommendation to the team.",
               "variants": [
                 "two"
               ]
@@ -450,7 +450,7 @@
       ]
     },
     {
-      "text": "Cosmos DB subject-matter expert and point of contact for the team's Microsoft Graph API design reviews; ran training sessions on Graph, Kusto-backed APIs, and AI tools.",
+      "text": "Cosmos DB subject-matter expert and point of contact for the team's Microsoft Graph API design reviews; ran training sessions on Graph, Azure Data Explorer APIs, and AI tools.",
       "variants": [
         "two"
       ]
