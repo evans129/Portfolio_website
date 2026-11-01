@@ -220,12 +220,7 @@ def build_document(data: dict, variant: str, layout: Layout, phone: str | None) 
     rd.heading("Summary")
     rd.run(rd.paragraph(), basics["summary"])
 
-    rd.heading("Skills")
-    for category in data["skills"]:
-        p = rd.paragraph(after=0.5)
-        rd.run(p, f"{category['category']}: ", bold=True)
-        rd.run(p, ", ".join(category["items"]))
-
+    # Experience comes before Skills so the most valuable top third of the page shows impact first.
     rd.heading("Work Experience")
     previous_company = None
     for job in data["experience"]:
@@ -247,13 +242,28 @@ def build_document(data: dict, variant: str, layout: Layout, phone: str | None) 
                 continue
             # A sub-heading only helps when a role spans several products/teams.
             if len(job["groups"]) > 1:
-                p = rd.paragraph(before=2, after=0.5, keep_next=True)
+                has_dates = bool(group.get("start"))
+                p = rd.paragraph(before=2, after=0.5, keep_next=True, right_tab=has_dates)
                 rd.run(p, group["name"], bold=True, italic=True)
                 if group.get("context"):
                     rd.run(p, f" | {group['context']}", italic=True)
+                if has_dates:
+                    rd.run(p, f"\t{date_range(group)}", italic=True)
             for item in bullets:
                 rd.run(rd.bullet(), item["text"])
         previous_company = job["company"]
+
+    rd.heading("Skills")
+    for category in data["skills"]:
+        p = rd.paragraph(after=0.5)
+        rd.run(p, f"{category['category']}: ", bold=True)
+        rd.run(p, ", ".join(category["items"]))
+
+    awards = [item for item in data.get("awards", []) if included(item, variant)]
+    if awards:
+        rd.heading("Awards")
+        for item in awards:
+            rd.run(rd.bullet(), item["text"])
 
     leadership = [item for item in data.get("leadership", []) if included(item, variant)]
     if leadership:
@@ -279,12 +289,6 @@ def build_document(data: dict, variant: str, layout: Layout, phone: str | None) 
         detail = f"; {school['detail']}" if school.get("detail") else ""
         rd.run(p, f"{school['degree']}{detail}")
         rd.run(p, f"\t{date_range(school)}")
-
-    awards = [item for item in data.get("awards", []) if included(item, variant)]
-    if awards:
-        rd.heading("Awards")
-        for item in awards:
-            rd.run(rd.bullet(), item["text"])
 
     props = rd.doc.core_properties
     now = dt.datetime.now(dt.timezone.utc).replace(tzinfo=None, microsecond=0)

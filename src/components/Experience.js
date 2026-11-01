@@ -40,7 +40,14 @@ const Experience = ({ compact = false }) => (
                 const shown = compact ? bullets.slice(0, 2) : bullets;
                 return (
                   <article className="group card" key={group.name}>
-                    <h4>{group.name}</h4>
+                    <div className="group-header">
+                      <h4>{group.name}</h4>
+                      {group.start && (
+                        <span className="muted group-years">
+                          {group.start} – {group.end}
+                        </span>
+                      )}
+                    </div>
                     <p className="group-context">{group.context}</p>
                     <ul className="group-bullets">
                       {shown.map((b) => (
