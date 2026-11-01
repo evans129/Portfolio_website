@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import HeroImg2 from "../components/HeroImg2";
-import Form from "../components/Form";
+import ContactOptions from "../components/ContactOptions";
 import usePageTitle from "../hooks/usePageTitle";
 
 const Contact = () => {
@@ -12,7 +12,7 @@ const Contact = () => {
       <Navbar />
       <main>
         <HeroImg2 heading="CONTACT" text="Let's have a chat" />
-        <Form />
+        <ContactOptions />
       </main>
       <Footer />
     </>

@@ -6,7 +6,6 @@
     "resumeHeadline": "Software Engineer II | Backend, Cloud, and AI Systems",
     "location": "Hyderabad, India",
     "relocation": "Open to relocation",
-    "email": "[email removed]",
     "links": [
       {
         "label": "LinkedIn",
@@ -22,12 +21,6 @@
         "label": "Portfolio",
         "url": "https://evans129.github.io/Portfolio_website/",
         "display": "evans129.github.io/Portfolio_website"
-      },
-      {
-        "label": "LeetCode",
-        "url": "https://leetcode.com/devansh129/",
-        "display": "leetcode.com/devansh129",
-        "website": true
       }
     ],
     "tagline": "I build secure, scalable cloud platforms on Azure and AI agents that make engineering teams faster.",

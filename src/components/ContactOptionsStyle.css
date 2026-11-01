@@ -1,0 +1,39 @@
+.contact-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 1.5rem;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  height: 100%;
+  padding: 2rem;
+  color: var(--text);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.contact-card:hover,
+.contact-card:focus-visible {
+  border-color: var(--accent-3);
+  transform: translateY(-3px);
+}
+
+.contact-icon {
+  color: var(--accent-3);
+}
+
+.contact-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.contact-handle {
+  margin-top: auto;
+  color: var(--accent-3);
+  font-size: 0.95rem;
+  overflow-wrap: anywhere;
+}
