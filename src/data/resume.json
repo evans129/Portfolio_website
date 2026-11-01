@@ -35,16 +35,16 @@
   },
   "highlights": [
     {
+      "value": "99.8%",
+      "label": "of resolved incidents assisted by the self-learning AI on-call engineer I launched, saving an estimated 260+ engineering hours"
+    },
+    {
+      "value": "250+",
+      "label": "article pull requests in 3 weeks from the one-click accuracy reviews I shipped (~170 merged)"
+    },
+    {
       "value": "2x",
       "label": "monthly users of security baselines in Microsoft 365 Lighthouse after I shipped task-update notifications"
-    },
-    {
-      "value": "80%+",
-      "label": "increase in security-baseline cloning after my UX redesign"
-    },
-    {
-      "value": "70%+",
-      "label": "fewer Lighthouse incidents in a reliability drive where I introduced a self-healing alert tier"
     },
     {
       "value": "2 wins",
@@ -160,64 +160,52 @@
           ],
           "bullets": [
             {
-              "text": "Owned the greenfield platform's Azure architecture (Container Apps, App Service, Entra ID, Azure Data Explorer): repo strategy, a layered Backend-for-Frontend design, and reusable KQL functions that cut API latency.",
+              "text": "Shipped one-click accuracy reviews that generated 250+ article pull requests in 3 weeks (~170 merged): APIs rank support articles due for review by page views and open a reviewable PR in ~2–4 s via a GitHub App."
+            },
+            {
+              "text": "Owned the greenfield platform's Azure architecture (Container Apps, Entra ID, Azure Data Explorer): repo strategy, a layered Backend-for-Frontend design, and cached KQL functions that cut API latency and compute load."
+            },
+            {
+              "text": "Launched a self-learning AI on-call engineer on Azure SRE Agent that assisted in 99.8% of resolved incidents and saved an estimated 260+ engineering hours in 4 months; it updates its troubleshooting guides from engineer feedback.",
               "variants": [
                 "one"
               ]
             },
             {
-              "text": "Owned the greenfield platform's Azure architecture (Container Apps, App Service, Entra ID, Azure Data Explorer): repo strategy, a layered Backend-for-Frontend design, and a data access layer of reusable KQL functions.",
+              "text": "Launched a self-learning AI on-call engineer on Azure SRE Agent that assisted in 99.8% of resolved incidents and saved an estimated 260+ engineering hours in 4 months; it triages with troubleshooting guides kept as Markdown in the repo (published as docs) and updates them via PRs from engineers' feedback.",
               "variants": [
                 "two"
               ]
             },
             {
-              "text": "Cut API latency and application compute load by moving core business logic into Azure Data Explorer (Kusto) functions with query optimization and native caching, leaving the data access layer as thin, parameterized queries.",
-              "variants": [
-                "two"
-              ]
+              "text": "Secured APIs with OAuth 2.0: least-privilege Entra ID (Azure AD) app registrations and strict JWT validation, meeting Microsoft's Secure Future Initiative standards."
             },
             {
-              "text": "Secured APIs with OAuth 2.0: least-privilege Entra ID (Azure AD) app registrations, JWT validation (signature, issuer, audience, lifetime, scope), and a token-validation API, meeting Microsoft's Secure Future Initiative standards."
-            },
-            {
-              "text": "Engineered reliable GitHub-issue ingestion into Azure Data Explorer (checkpointed .NET job, retries, alerts).",
+              "text": "Engineered reliable, checkpointed ingestion of 23K+ GitHub issues from 115 docs repos into Azure Data Explorer.",
               "variants": [
                 "one"
               ]
             },
             {
-              "text": "Engineered reliable, extensible GitHub-issue ingestion into Azure Data Explorer (.NET Container Apps Job, checkpointed polling, retries, Bicep, OpenTelemetry alerts) that onboards new repos and issue types easily.",
+              "text": "Engineered reliable, extensible ingestion of 23K+ GitHub issues from 115 docs repos into Azure Data Explorer (checkpointed .NET Container Apps Job, retries, OpenTelemetry alerts).",
               "variants": [
                 "two"
               ]
             },
             {
-              "text": "Shipped one-click accuracy reviews: APIs that rank support articles due for review by page views and open a reviewable GitHub pull request in ~2–4 s via a GitHub App, so experts fix high-traffic articles first."
-            },
-            {
-              "text": "Launched a self-learning AI on-call engineer on Azure SRE Agent that triages incidents using troubleshooting guides kept as Markdown in the repo (published as docs) and updates them via PRs from engineers' feedback."
-            },
-            {
-              "text": "Made the platform fully infrastructure-as-code with Bicep and Azure DevOps CI/CD (Azure Data Explorer, Container Apps Jobs, E2E pipelines), eliminating configuration drift and turning new security requirements into code changes.",
+              "text": "Made the platform fully infrastructure-as-code (Bicep, Azure DevOps CI/CD), ending configuration drift; added stable Playwright E2E pipelines and production-like Azure Load Testing that drove environment upgrades.",
               "variants": [
                 "two"
               ]
             },
             {
-              "text": "Raised release confidence with non-flaky Playwright E2E pipelines (federated-identity auth, near-zero false positives) and production-like Azure Load Testing, which drove production-parity environment upgrades.",
+              "text": "Fixed accuracy dashboards where only 142 of 278 views matched GitHub, using strict label-based product matching and a reversible, versioned data re-map.",
               "variants": [
                 "two"
               ]
             },
             {
-              "text": "Fixed mismatched accuracy dashboards (only 142 of 278 dashboard views matched GitHub) by matching issues to products strictly on labels, plus a reversible, versioned data re-map (plan, apply, verify, undo).",
-              "variants": [
-                "two"
-              ]
-            },
-            {
-              "text": "Delivered the proof of concept that validated the platform's architecture, data model, and auth design before build-out, and prototyped an authenticated Model Context Protocol (MCP) server for AI agents.",
+              "text": "Built the proof of concept that validated the architecture, data model, and auth before build-out; prototyped an authenticated Model Context Protocol (MCP) server for AI agents.",
               "variants": [
                 "two"
               ]
@@ -240,25 +228,19 @@
           ],
           "bullets": [
             {
-              "text": "Developed the AI reviewer agent's validation tool: 35 deterministic, unit-tested publishing checks (metadata, structure, links) it runs on every draft before deciding to approve or revise."
+              "text": "Built the AI reviewer agent's validation layer: 35 deterministic, unit-tested publishing checks (metadata, structure, links) that gate every draft before approval or revision."
             },
             {
-              "text": "Automated merging of writers' edit PRs into AI-drafted articles across the event-driven pipeline (GitHub webhook on Azure Functions, Service Bus, coordinator) with repo-allowlist and branch-prefix guardrails."
+              "text": "Automated merging of writers' edits into AI-drafted articles across an event-driven pipeline (GitHub webhooks on Azure Functions, Service Bus) with repo-allowlist and branch-prefix guardrails."
             },
             {
-              "text": "Caught two AI agent releases that served zero traffic (production stayed pinned to an old Azure AI Foundry version while pipelines were green); made every deploy pin and verify the served version, and pinned agent dependencies.",
+              "text": "Caught two AI agent releases that served zero traffic while pipelines were green (production stayed pinned to an old version); made every deploy pin and verify the served version.",
               "variants": [
                 "two"
               ]
             },
             {
-              "text": "Added Bicep IaC and CI/CD for an Entra-authenticated MCP server on Azure Functions (Flex Consumption), plus pipelines that deploy monitoring alerts as code to every environment.",
-              "variants": [
-                "two"
-              ]
-            },
-            {
-              "text": "Bootstrapped infrastructure for a new service that turns product change announcements into doc-update tasks for the agents: Bicep, multi-environment CI/CD, alerts-as-code, least-privilege managed identity, federated auth.",
+              "text": "Set up Bicep IaC, CI/CD, and alerts-as-code for an Entra-authenticated MCP server on Azure Functions and for a new service that turns product change announcements into doc-update tasks.",
               "variants": [
                 "two"
               ]
@@ -287,7 +269,7 @@
               ]
             },
             {
-              "text": "Created a retrieval-augmented generation (RAG) help agent over internal docs and troubleshooting guides that on-call engineers use to resolve known issues and unblock customers.",
+              "text": "Created a retrieval-augmented generation (RAG) help agent over internal docs and troubleshooting guides that on-call engineers use to resolve known issues.",
               "variants": [
                 "two"
               ]
@@ -299,31 +281,25 @@
               ]
             },
             {
-              "text": "Introduced versioned release branches with rollback for three services, mitigating a top-severity (Sev1) outage within an hour; resolved Sev1s on support pages and knowledge-base redirects (Azure DevOps throttling).",
+              "text": "Introduced versioned release branches with rollback for three services, mitigating a top-severity outage within an hour; resolved other top-severity incidents on support pages and redirects.",
               "variants": [
                 "two"
               ]
             },
             {
-              "text": "Diagnosed an Azure Cognitive Search indexing failure in a high-priority escalation with no prior ramp-up; unblocked a partner team's monthly reporting by updating indexer fields when a code fix couldn't ship.",
+              "text": "Diagnosed an Azure Cognitive Search indexing failure in a high-priority escalation with no prior ramp-up, unblocking a partner team's monthly reporting.",
               "variants": [
                 "two"
               ]
             },
             {
-              "text": "Ramped up on Azure Synapse and Scala within a month to own log and user-feed data pipelines, restored the beta environment, and wrote documentation and debugging guides for the system.",
+              "text": "Ramped up on Azure Synapse and Scala in a month to own log and user-feed data pipelines; restored the beta environment and documented the system.",
               "variants": [
                 "two"
               ]
             },
             {
-              "text": "Automated release and review workflows: GitHub Copilot agents for releases and pipeline runs, a release-branching script separating production and pre-production deployments, and AI code-review bot skills.",
-              "variants": [
-                "two"
-              ]
-            },
-            {
-              "text": "Fixed the PR build pipeline (unsupported package version) to unblock frontend deployments, restored critical service accounts to unblock localization, and created short links and runbooks that sped up common developer tasks.",
+              "text": "Automated release and review workflows (GitHub Copilot agents, a release-branching script, AI code-review bot skills); unblocked frontend deployments and localization by fixing builds and service accounts.",
               "variants": [
                 "two"
               ]
@@ -345,28 +321,28 @@
           ],
           "bullets": [
             {
-              "text": "Redesigned security baselines (reusable security-policy templates, e.g., require MFA, that MSPs deploy to customer tenants) with one-click cloning of Microsoft's defaults, lifting cloning 80%+ and core-action completion 20%+.",
+              "text": "Doubled monthly users of security baselines (reusable security-policy templates, e.g., require MFA, that MSPs deploy to customers) with update badges that prompt redeploys when Microsoft revises them; adopted product-wide."
+            },
+            {
+              "text": "Redesigned baselines with one-click cloning of defaults, lifting cloning 80%+ and core-action completion 20%+.",
               "variants": [
                 "one"
               ]
             },
             {
-              "text": "Redesigned security baselines (reusable security-policy templates, e.g., require MFA, that MSPs deploy to customer tenants): one-click cloning of Microsoft's defaults, clearer custom authoring, and onboarding coach marks, lifting cloning 80%+ and completion of core actions 20%+ (adjusted for user growth).",
+              "text": "Redesigned baselines with one-click cloning of Microsoft's defaults and onboarding coach marks, lifting cloning 80%+ and core-action completion 20%+ (adjusted for user growth).",
               "variants": [
                 "two"
               ]
             },
             {
-              "text": "Doubled monthly users of security baselines (visits up 2.3x month over month) by shipping update badges and banners that flag when Microsoft revises a baseline's security task so MSPs redeploy it; adopted product-wide."
-            },
-            {
-              "text": "Productized my hackathon prototype that shows, on the baselines page, which customer tenants use each baseline and their rollout status (deployment plan), reaching a 5.9% click-through rate in month one.",
+              "text": "Productized my hackathon prototype showing which customer tenants use each baseline and their rollout status, reaching a 5.9% click-through rate in month one.",
               "variants": [
                 "two"
               ]
             },
             {
-              "text": "Built Microsoft 365 Copilot adoption insights for MSPs (Copilot-task filters, a self-service purchases metric, telemetry) and delivered a recommended-tasks side panel after code freeze to keep a high-visibility launch on time.",
+              "text": "Built Microsoft 365 Copilot adoption insights for MSPs and delivered a recommended-tasks panel after code freeze to keep a high-visibility launch on time.",
               "variants": [
                 "two"
               ]
@@ -378,37 +354,37 @@
               ]
             },
             {
-              "text": "Helped cut Lighthouse incidents 70%+ by introducing a self-heal tier: noisy alerts (e.g., VM health) stay notifications and page on-call only past thresholds; automated incident filtering and tuned monitors.",
+              "text": "Helped cut Lighthouse incidents 70%+ with a self-heal tier: noisy alerts stay notifications and page on-call only past thresholds; tuned monitors and automated incident filtering.",
               "variants": [
                 "two"
               ]
             },
             {
-              "text": "Created Microsoft Graph APIs backed by Azure Data Explorer for partner sales insights (subscription renewals, license opportunities, user preferences); fixed pagination and lifted a 7-partner-ID filter limit with an in-operator query.",
+              "text": "Created Microsoft Graph APIs backed by Azure Data Explorer for partner sales insights (renewals, license opportunities, user preferences); lifted a 7-ID filter limit and fixed pagination.",
               "variants": [
                 "two"
               ]
             },
             {
-              "text": "Raised test coverage with an AI instructions file for generating unit tests and Storybook stories with VS Code agents (adopted team-wide), new baselines UI unit tests, stabilized Playwright E2E tests, and a repaired E2E pipeline.",
+              "text": "Raised test coverage with a team-wide AI instructions file for generating unit tests and Storybook stories, new UI unit tests, and stabilized Playwright E2E tests.",
               "variants": [
                 "two"
               ]
             },
             {
-              "text": "Uncovered and fixed Lighthouse-wide issues (broken empty states replaced with shared components, accessibility bugs, an infinite loading shimmer, permission tags) and trimmed page URLs to essential fields for security.",
+              "text": "Fixed Lighthouse-wide issues (shared empty-state components, accessibility bugs, an infinite loading shimmer) and trimmed page URLs to essential fields for security.",
               "variants": [
                 "two"
               ]
             },
             {
-              "text": "Automated quarterly test-tenant onboarding (a security-compliance requirement) with AI; wrote PowerShell tools to set up test accounts and validate Microsoft Graph API schemas (CSDL); fixed the schema-publishing pipeline.",
+              "text": "Automated quarterly test-tenant onboarding (a security-compliance requirement) with AI and wrote PowerShell tools for test accounts and Graph API schema checks.",
               "variants": [
                 "two"
               ]
             },
             {
-              "text": "Prototyped Copilot agents that bring Lighthouse into Microsoft Teams and used Azure OpenAI function calling with GPT models to automate deploying security-baseline tasks (hackathons).",
+              "text": "Prototyped Copilot agents bringing Lighthouse into Microsoft Teams and used Azure OpenAI function calling to automate security-baseline deployment (hackathons).",
               "variants": [
                 "two"
               ]
@@ -444,13 +420,13 @@
               ]
             },
             {
-              "text": "Evaluated Xamarin-based and native Google Play In-App Updates approaches and implemented both immediate and flexible update flows in the Microsoft 365 Admin Android app, improving the app update rate by 60%.",
+              "text": "Raised the Microsoft 365 Admin Android app's update rate 60% by evaluating Xamarin and native Google Play options and building immediate and flexible in-app updates.",
               "variants": [
                 "two"
               ]
             },
             {
-              "text": "Fixed edge-case bugs, validated the feature through alpha and internal beta testing on 10-20 devices, and presented the POC demo, tech doc, and recommendation to the team.",
+              "text": "Fixed edge-case bugs, validated with alpha and beta testing on 10–20 devices, and presented the POC, tech doc, and recommendation to the team.",
               "variants": [
                 "two"
               ]
@@ -468,19 +444,19 @@
       ]
     },
     {
-      "text": "Mentored and onboarded new hires as the India team doubled; authored the team's Getting Started guide and kept a living runbook of commands and links that unblocked teammates.",
+      "text": "Mentored and onboarded new hires as the team doubled; wrote the team's Getting Started guide and a living runbook that unblocked teammates.",
       "variants": [
         "two"
       ]
     },
     {
-      "text": "Cosmos DB subject-matter expert and single point of contact for the team's Microsoft Graph API design reviews; ran knowledge-transfer sessions on Graph deployment and schema publishing, Kusto-backed APIs, and AI tools.",
+      "text": "Cosmos DB subject-matter expert and point of contact for the team's Microsoft Graph API design reviews; ran training sessions on Graph, Kusto-backed APIs, and AI tools.",
       "variants": [
         "two"
       ]
     },
     {
-      "text": "Go-to engineer for product managers' data queries and analysis; proactively cleaned up pending incidents and updated troubleshooting guides in areas beyond my ownership.",
+      "text": "Go-to engineer for product managers' data analysis; proactively cleared pending incidents and updated troubleshooting guides beyond my ownership.",
       "variants": [
         "two"
       ]
@@ -490,7 +466,7 @@
     {
       "name": "Face Analyzer (Final Year Project)",
       "tech": "React, TensorFlow, Keras, Streamlit",
-      "text": "Web app that analyzes a face from a camera capture or uploaded image using transfer-learning models, with a downloadable report and email delivery (EmailJS, Yagmail); deployed on Streamlit and GitHub Pages.",
+      "text": "Web app that analyzes faces from a camera or uploaded image with transfer-learning models and sends downloadable or emailed reports; deployed on Streamlit and GitHub Pages.",
       "url": "https://github.com/evans129/FaceAnalyzer"
     },
     {

@@ -220,12 +220,7 @@ def build_document(data: dict, variant: str, layout: Layout, phone: str | None) 
     rd.heading("Summary")
     rd.run(rd.paragraph(), basics["summary"])
 
-    rd.heading("Skills")
-    for category in data["skills"]:
-        p = rd.paragraph(after=0.5)
-        rd.run(p, f"{category['category']}: ", bold=True)
-        rd.run(p, ", ".join(category["items"]))
-
+    # Experience comes before Skills so the most valuable top third of the page shows impact first.
     rd.heading("Work Experience")
     previous_company = None
     for job in data["experience"]:
@@ -258,16 +253,22 @@ def build_document(data: dict, variant: str, layout: Layout, phone: str | None) 
                 rd.run(rd.bullet(), item["text"])
         previous_company = job["company"]
 
-    leadership = [item for item in data.get("leadership", []) if included(item, variant)]
-    if leadership:
-        rd.heading("Leadership" if variant == "one" else "Leadership and Mentorship")
-        for item in leadership:
-            rd.run(rd.bullet(), item["text"])
+    rd.heading("Skills")
+    for category in data["skills"]:
+        p = rd.paragraph(after=0.5)
+        rd.run(p, f"{category['category']}: ", bold=True)
+        rd.run(p, ", ".join(category["items"]))
 
     awards = [item for item in data.get("awards", []) if included(item, variant)]
     if awards:
         rd.heading("Awards")
         for item in awards:
+            rd.run(rd.bullet(), item["text"])
+
+    leadership = [item for item in data.get("leadership", []) if included(item, variant)]
+    if leadership:
+        rd.heading("Leadership" if variant == "one" else "Leadership and Mentorship")
+        for item in leadership:
             rd.run(rd.bullet(), item["text"])
 
     projects = [item for item in data.get("projects", []) if included(item, "two")] if variant == "two" else []

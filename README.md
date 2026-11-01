@@ -50,7 +50,7 @@ npm run build      # production build in build/
 
 The resume layout follows common ATS guidance:
 
-- One column, with standard section headings (Summary, Skills, Work Experience, Education)
+- One column, with standard section headings (Summary, Work Experience, Skills, Awards, Leadership, Education)
 - Calibri font with contact details in the body rather than a header or footer
 - No tables, text boxes, icons, or images
 - Real, selectable text exported as a tagged PDF
