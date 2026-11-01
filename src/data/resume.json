@@ -31,7 +31,7 @@
       }
     ],
     "tagline": "I build secure, scalable cloud platforms on Azure and AI agents that make engineering teams faster.",
-    "summary": "Software Engineer II at Microsoft with 3+ years building full-stack, cloud-native Azure systems (C#/.NET, React, TypeScript, KQL). Owned architecture, auth, and data ingestion for an AI content authoring and content-health dashboard; doubled monthly users of Microsoft 365 Lighthouse security baselines; won two Microsoft hackathons with agentic AI."
+    "summary": "Software Engineer II at Microsoft with 3+ years building full-stack Azure systems (C#/.NET, Python, React, TypeScript, KQL). Owned architecture, auth, and data ingestion for an AI content authoring and content-health dashboard; doubled monthly users of Microsoft 365 Lighthouse security baselines; won two Microsoft hackathons with agentic AI."
   },
   "highlights": [
     {
@@ -161,19 +161,22 @@
               "text": "Owned platform architecture on Azure (Container Apps, App Service, Entra ID, Azure Data Explorer), defining the repo strategy, layered Backend-for-Frontend design, and a data access layer of reusable KQL functions."
             },
             {
-              "text": "Cut API latency and application compute load by moving core business logic into Azure Data Explorer (Kusto) functions with query optimization and native caching, leaving the data access layer as thin, parameterized queries."
+              "text": "Cut API latency and application compute load by moving core business logic into Azure Data Explorer (Kusto) functions with query optimization and native caching, leaving the data access layer as thin, parameterized queries.",
+              "variants": [
+                "two"
+              ]
             },
             {
               "text": "Built OAuth 2.0 authentication with least-privilege Entra ID (Azure AD) app registrations, JWT validation (signature, issuer, audience, lifetime, scope), and a token-validation API, meeting Microsoft's Secure Future Initiative standards."
             },
             {
-              "text": "Built the dashboard's GitHub-issue ingestion pipeline into Azure Data Explorer (.NET worker on Container Apps Jobs) with polling, checkpointing, and retries; provisioned via Bicep with OpenTelemetry alerts and auto-created incidents.",
+              "text": "Built the dashboard's GitHub-issue ingestion into Azure Data Explorer (.NET Container Apps Job, checkpointing).",
               "variants": [
                 "one"
               ]
             },
             {
-              "text": "Built the dashboard's GitHub-issue ingestion pipeline into Azure Data Explorer as a .NET worker on Container Apps Jobs with polling, checkpointing, and resilience logic; provisioned it with Bicep (managed identity, Storage, Key Vault) with OpenTelemetry, alerts, and auto-created incidents, so new repos and issue types onboard easily.",
+              "text": "Built the dashboard's GitHub-issue ingestion into Azure Data Explorer (.NET Container Apps Job, checkpointed polling, retries, Bicep, OpenTelemetry alerts); its extensible design onboards new repos and issue types easily.",
               "variants": [
                 "two"
               ]
@@ -208,6 +211,45 @@
           ]
         },
         {
+          "name": "AI article-creation pipeline",
+          "context": "Python services and Azure AI Foundry agents that draft and review docs as PRs",
+          "tech": [
+            "Python",
+            "Azure AI Foundry",
+            "Azure Functions",
+            "Service Bus",
+            "Azure Container Apps",
+            "Bicep",
+            "GitHub API"
+          ],
+          "bullets": [
+            {
+              "text": "Built the AI reviewer agent's validation tool for the article-creation pipeline: 35 deterministic publishing checks (metadata, structure, links) it runs on every draft before deciding to approve or revise."
+            },
+            {
+              "text": "Built auto-merge of writers' edit PRs into AI-drafted articles across the GitHub webhook (Azure Functions), Service Bus, and coordinator, with repo-allowlist and branch-prefix guardrails; extended to accuracy-review PRs."
+            },
+            {
+              "text": "Caught two AI agent releases that served zero traffic (production stayed pinned to an old Azure AI Foundry version while pipelines were green); made every deploy pin and verify the served version, and pinned agent dependencies.",
+              "variants": [
+                "two"
+              ]
+            },
+            {
+              "text": "Added Bicep IaC and CI/CD for an Entra-authenticated MCP server on Azure Functions (Flex Consumption), plus pipelines that deploy monitoring alerts as code to every environment.",
+              "variants": [
+                "two"
+              ]
+            },
+            {
+              "text": "Bootstrapped infrastructure for a new service that turns product change announcements into doc-update tasks for the agents: Bicep, multi-environment CI/CD, alerts-as-code, least-privilege managed identity, federated auth.",
+              "variants": [
+                "two"
+              ]
+            }
+          ]
+        },
+        {
           "name": "Content publishing platform for Microsoft Support",
           "context": "Production operations, release engineering, AI automation",
           "tech": [
@@ -221,10 +263,28 @@
           ],
           "bullets": [
             {
-              "text": "Built a retrieval-augmented generation (RAG) help agent over internal docs and troubleshooting guides that on-call engineers use to resolve known issues and unblock customers."
+              "text": "Built a retrieval-augmented generation (RAG) help agent that on-call engineers use to resolve known issues.",
+              "variants": [
+                "one"
+              ]
             },
             {
-              "text": "Introduced versioned release branches with rollback for two platforms, mitigating a top-severity (Sev1) outage within an hour; resolved Sev1s on support pages and knowledge-base redirects (Azure DevOps throttling)."
+              "text": "Built a retrieval-augmented generation (RAG) help agent over internal docs and troubleshooting guides that on-call engineers use to resolve known issues and unblock customers.",
+              "variants": [
+                "two"
+              ]
+            },
+            {
+              "text": "Introduced versioned release branches with rollback for three services; mitigated a top-severity outage in an hour.",
+              "variants": [
+                "one"
+              ]
+            },
+            {
+              "text": "Introduced versioned release branches with rollback for three services, mitigating a top-severity (Sev1) outage within an hour; resolved Sev1s on support pages and knowledge-base redirects (Azure DevOps throttling).",
+              "variants": [
+                "two"
+              ]
             },
             {
               "text": "Diagnosed an Azure Cognitive Search indexing failure in a high-priority escalation with no prior ramp-up; unblocked a partner team's monthly reporting by updating indexer fields when a code fix couldn't ship.",
@@ -283,13 +343,22 @@
               "text": "Productized my hackathon prototype that shows, on the baselines page, which customer tenants use each baseline and their rollout status (deployment plan), reaching a 5.9% click-through rate in month one."
             },
             {
-              "text": "Built Microsoft 365 Copilot adoption insights for MSPs: Copilot-task filters on baselines and deployment plans, a recommended-tasks side panel delivered after code freeze to keep a high-visibility launch on time, telemetry, and a self-service purchases metric (API and UI).",
+              "text": "Built Microsoft 365 Copilot adoption insights for MSPs (Copilot-task filters, a self-service purchases metric, telemetry) and delivered a recommended-tasks side panel after code freeze to keep a high-visibility launch on time.",
               "variants": [
                 "two"
               ]
             },
             {
-              "text": "Helped cut Lighthouse incidents by 70%+ by introducing a self-heal tier: noisy alerts (e.g., VM health) stay notifications and page on-call only past thresholds; automated incident filtering and tuned monitors."
+              "text": "Helped cut Lighthouse incidents 70%+ with a self-heal alert tier that pages on-call only past set thresholds.",
+              "variants": [
+                "one"
+              ]
+            },
+            {
+              "text": "Helped cut Lighthouse incidents by 70%+ by introducing a self-heal tier: noisy alerts (e.g., VM health) stay notifications and page on-call only past thresholds; automated incident filtering and tuned monitors.",
+              "variants": [
+                "two"
+              ]
             },
             {
               "text": "Built Microsoft Graph APIs backed by Azure Data Explorer for partner sales insights (subscription renewals, license opportunities, user preferences); fixed pagination and lifted a 7-partner-ID filter limit with an in-operator query.",
