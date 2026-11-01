@@ -1,0 +1,16 @@
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.social-links a {
+  display: inline-flex;
+  color: #ddd;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+  color: var(--accent-3);
+  transform: translateY(-2px);
+}

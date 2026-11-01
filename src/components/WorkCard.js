@@ -1,21 +1,34 @@
-import "./WorkCardStyle.css"
+import "./WorkCardStyle.css";
+import React from "react";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
-import React from 'react'
-import { NavLink } from "react-router-dom";
-
-const WorkCard = (props) => {
-  return (
-           <div className="project-card">
-            <img src={props.imgsrc} alt="project-img"></img>
-            <h2 className="project-title">{props.title}</h2>
-            <div className="pro-details"><p>{props.text}</p>
-           <div className="pro-btns">
-            <a href={props.view}><button className="btn">View</button></a>
-            <NavLink to={props.source} className="btn">Source</NavLink>
-        </div>
-        </div>
+const WorkCard = ({ imgsrc, title, text, tags = [], view, source }) => (
+  <article className="project-card card">
+    <div className="project-thumb">
+      <img src={imgsrc} alt={`Screenshot of ${title}`} loading="lazy" />
     </div>
-  )
-}
+    <div className="project-body">
+      <h3 className="project-title">{title}</h3>
+      <p className="project-text">{text}</p>
+      {tags.length > 0 && (
+        <ul className="chips" aria-label="Technologies">
+          {tags.map((tag) => (
+            <li className="chip" key={tag}>
+              {tag}
+            </li>
+          ))}
+        </ul>
+      )}
+      <div className="pro-btns">
+        <a className="btn btn-small" href={view} target="_blank" rel="noopener noreferrer">
+          <FaExternalLinkAlt aria-hidden="true" /> Live
+        </a>
+        <a className="btn-light btn-small" href={source} target="_blank" rel="noopener noreferrer">
+          <FaGithub aria-hidden="true" /> Source
+        </a>
+      </div>
+    </div>
+  </article>
+);
 
-export default WorkCard
+export default WorkCard;

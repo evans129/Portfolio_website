@@ -1,0 +1,99 @@
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.job {
+  position: relative;
+  padding-left: 1.75rem;
+  border-left: 2px solid transparent;
+  border-image: var(--gradient) 1;
+}
+
+.job::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 0.4rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--gradient);
+}
+
+.job-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.job-company {
+  font-size: 1.6rem;
+}
+
+.job-roles {
+  margin: 0.4rem 0 1.25rem;
+}
+
+.job-roles li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 1.05rem;
+}
+
+.job-title {
+  font-weight: 600;
+}
+
+.job-groups {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.group {
+  padding: 1.5rem;
+}
+
+.group h4 {
+  font-size: 1.25rem;
+}
+
+.group-context {
+  margin-bottom: 0.9rem;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.group-bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-bottom: 1.1rem;
+}
+
+.group-bullets li {
+  position: relative;
+  padding-left: 1.2rem;
+  color: #e6e6e6;
+  font-size: 1.02rem;
+}
+
+.group-bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent-3);
+}
+
+.experience-more {
+  margin-top: 2.5rem;
+}

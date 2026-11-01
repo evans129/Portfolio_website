@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# resume builder: private copies contain a phone number and must never be committed
+/resume/private/
+__pycache__/

@@ -1,0 +1,15 @@
+{
+  "one": {
+    "pdf": "Devansh_Kumar_Resume.pdf",
+    "pages": [
+      "Devansh_Kumar_Resume-page1.webp"
+    ]
+  },
+  "two": {
+    "pdf": "Devansh_Kumar_Resume_Detailed.pdf",
+    "pages": [
+      "Devansh_Kumar_Resume_Detailed-page1.webp",
+      "Devansh_Kumar_Resume_Detailed-page2.webp"
+    ]
+  }
+}

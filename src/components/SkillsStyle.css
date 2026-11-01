@@ -1,0 +1,14 @@
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+
+.skill-group {
+  padding: 1.4rem 1.5rem;
+}
+
+.skill-group h3 {
+  margin-bottom: 0.9rem;
+  font-size: 1.2rem;
+}
