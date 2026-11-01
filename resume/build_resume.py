@@ -247,10 +247,13 @@ def build_document(data: dict, variant: str, layout: Layout, phone: str | None) 
                 continue
             # A sub-heading only helps when a role spans several products/teams.
             if len(job["groups"]) > 1:
-                p = rd.paragraph(before=2, after=0.5, keep_next=True)
+                has_dates = bool(group.get("start"))
+                p = rd.paragraph(before=2, after=0.5, keep_next=True, right_tab=has_dates)
                 rd.run(p, group["name"], bold=True, italic=True)
                 if group.get("context"):
                     rd.run(p, f" | {group['context']}", italic=True)
+                if has_dates:
+                    rd.run(p, f"\t{date_range(group)}", italic=True)
             for item in bullets:
                 rd.run(rd.bullet(), item["text"])
         previous_company = job["company"]
@@ -259,6 +262,12 @@ def build_document(data: dict, variant: str, layout: Layout, phone: str | None) 
     if leadership:
         rd.heading("Leadership" if variant == "one" else "Leadership and Mentorship")
         for item in leadership:
+            rd.run(rd.bullet(), item["text"])
+
+    awards = [item for item in data.get("awards", []) if included(item, variant)]
+    if awards:
+        rd.heading("Awards")
+        for item in awards:
             rd.run(rd.bullet(), item["text"])
 
     projects = [item for item in data.get("projects", []) if included(item, "two")] if variant == "two" else []
@@ -279,12 +288,6 @@ def build_document(data: dict, variant: str, layout: Layout, phone: str | None) 
         detail = f"; {school['detail']}" if school.get("detail") else ""
         rd.run(p, f"{school['degree']}{detail}")
         rd.run(p, f"\t{date_range(school)}")
-
-    awards = [item for item in data.get("awards", []) if included(item, variant)]
-    if awards:
-        rd.heading("Awards")
-        for item in awards:
-            rd.run(rd.bullet(), item["text"])
 
     props = rd.doc.core_properties
     now = dt.datetime.now(dt.timezone.utc).replace(tzinfo=None, microsecond=0)

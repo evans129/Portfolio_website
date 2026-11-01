@@ -63,6 +63,19 @@
   font-size: 1.25rem;
 }
 
+.group-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.25rem 1rem;
+}
+
+.group-years {
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
 .group-context {
   margin-bottom: 0.9rem;
   color: var(--muted);
