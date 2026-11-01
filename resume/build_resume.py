@@ -209,8 +209,7 @@ def build_document(data: dict, variant: str, layout: Layout, phone: str | None) 
     contact = [f"{basics['location']} ({basics['relocation']})"]
     if phone:
         contact.append(phone)
-    rd.run(p, " | ".join(contact) + " | ", size=small)
-    rd.link(p, f"mailto:{basics['email']}", basics["email"], size=small)
+    rd.run(p, " | ".join(contact), size=small)
     p = rd.paragraph(align=WD_ALIGN_PARAGRAPH.CENTER)
     for i, link in enumerate(l for l in basics["links"] if not l.get("website")):
         if i:

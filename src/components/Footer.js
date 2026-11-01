@@ -1,6 +1,6 @@
 import "./FooterStyle.css";
 import React from "react";
-import { FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { FaMapMarkerAlt } from "react-icons/fa";
 import SocialLinks from "./SocialLinks";
 import resume from "../data/resume.json";
 
@@ -19,10 +19,6 @@ const Footer = () => {
               <span>
                 {basics.location} · {basics.relocation}
               </span>
-            </li>
-            <li>
-              <FaEnvelope aria-hidden="true" />
-              <a href={`mailto:${basics.email}`}>{basics.email}</a>
             </li>
           </ul>
         </div>

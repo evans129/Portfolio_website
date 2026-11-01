@@ -35,10 +35,6 @@
   color: #cfcfcf;
 }
 
-.footer-contact a:hover {
-  color: var(--accent-3);
-}
-
 .copyright {
   margin-top: 3rem;
   text-align: center;

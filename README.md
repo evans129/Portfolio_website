@@ -4,7 +4,7 @@ Personal portfolio of **Devansh Kumar**, Software Engineer II at Microsoft.
 
 **Live site:** https://evans129.github.io/Portfolio_website/
 
-Built with React (Create React App) and React Router, with EmailJS for the contact form. It's deployed to GitHub Pages by GitHub Actions.
+Built with React (Create React App) and React Router. It's deployed to GitHub Pages by GitHub Actions.
 
 ## Project structure
 
@@ -45,7 +45,7 @@ npm run build      # production build in build/
    $env:RESUME_PHONE = "<your phone number>"; npm run resume
    ```
 
-   Never put the phone number in `resume.json`. A unit test fails if the public data contains one.
+   Never put the phone number or an email address in `resume.json`. Unit tests fail if the public data contains either.
 4. Run `python resume/build_resume.py --print-text` to see the plain text an applicant tracking system (ATS) would extract.
 
 The resume layout follows common ATS guidance:
